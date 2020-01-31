@@ -1,2 +1,1 @@
-# cs231n_assignments
-My attempt at the assignments of CS231n Stanford Course
+Details about this assignment can be found [on the course webpage](http://cs231n.github.io/), under Assignment #1 of Spring 2019.
