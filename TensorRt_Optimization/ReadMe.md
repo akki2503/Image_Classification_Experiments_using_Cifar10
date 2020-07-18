@@ -9,7 +9,7 @@ The first section deals with building and training a 3 block VGG style model fro
 However, the model overfits and gives a validation accuracy of around 75% it does the job 
 for demostration pursposes which the primary aim here. 
 
-![alt text](https://github.com/akki2503/CIFAR_10_experiments/blob/master/train_vs_val_loss.jpg?raw=true)
+![alt text](https://github.com/akki2503/CIFAR_10_experiments/blob/master/train_vs_val_loss.png?raw=true)
 
 ## Usage
 
