@@ -11,20 +11,29 @@ for demostration pursposes which the primary aim here.
 
 ![alt text](https://github.com/akki2503/CIFAR_10_experiments/blob/master/TensorRt_Optimization/train_vs_val_loss.png?raw=true)
 
-## Usage
+## Converting Keras .hdf5 model to frozen graph model
 
-```python
-import foobar
+Section 2 deals with converting the model from .hdf5 format to frozen graph model and writing it to .pb format.
+It also pertaing to performing inference on a image from the web and displaying infernece time.
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+Its important to convert the keras model or a tensorflow model to frozen graph as Tensorflow models contain all of the millions of variables including gradients. Think about it, you don’t need the gradients when you deploy your model on a webserver so why carry all this load. Freezing is the process to identify and save all of required things(graph, weights etc) in a single file that you can easily use.  
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+![alt text](https://github.com/akki2503/CIFAR_10_experiments/blob/master/TensorRt_Optimization/frozen_graph_model_inference.png?raw=true)
 
-Please make sure to update tests as appropriate.
+## Installing the required libraries and packages for TensorRT Optimization
+
+The experiment is performed on a remote machine using Google Colab. The libraries and packages compatible with the CUDA version installed on it have to be chosen accordingly from the nvidia webiste.
+
+For experimenting in google colab, "nv-tensorrt-repo-ubuntu1804-cuda10.0-trt5.1.5.0-ga-20190427_1-1_amd64.deb".
+Install the corresponding tensorrt repo from NVIDIA repository and save it to the ``/content/drive/My\ Drive/python/`` location in your google drive. 
+
+## Building the TensorRt Engine and calculating inference time 
+
+The last section demostrates how to build the TensorRt Engine and perform Inference using the optimized model.
+
+##Results
+
+The inference time of the model increases by almost 3X when optimized using TensorRt making it a viable tool for deployment in real-time applications. 
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
