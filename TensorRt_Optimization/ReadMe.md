@@ -31,9 +31,11 @@ Install the corresponding tensorrt repo from NVIDIA repository and save it to th
 
 The last section demostrates how to build the TensorRt Engine and perform Inference using the optimized model.
 
-##Results
+## Results
 
 The inference time of the model increases by almost 3X when optimized using TensorRt making it a viable tool for deployment in real-time applications. 
+
+![alt text](https://github.com/akki2503/CIFAR_10_experiments/blob/master/TensorRt_Optimization/tensorrt_model_inference.png?raw=true)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
